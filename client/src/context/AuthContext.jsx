@@ -16,7 +16,7 @@ export const AuthProvider = ({ children }) => {
   }, []);
 
   const login = async (email, password) => {
-    const { data } = await axios.post('http://localhost:5000/api/auth/login', {
+    const { data } = await axios.post('https://mern-ecodecide-hackathon-project-1.onrender.com/api/auth/login', {
       email,
       password
     });
@@ -26,7 +26,7 @@ export const AuthProvider = ({ children }) => {
   };
 
   const register = async (userData) => {
-    const { data } = await axios.post('http://localhost:5000/api/auth/register', userData);
+    const { data } = await axios.post('https://mern-ecodecide-hackathon-project-1.onrender.com/api/auth/register', userData);
     localStorage.setItem('token', data.token);
     setUser(data);
     return data;
