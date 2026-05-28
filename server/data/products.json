@@ -1,0 +1,22 @@
+{
+  "products": [
+    {
+      "name": "iPhone 15",
+      "category": "Smartphone",
+      "ecoScore": 65,
+      "carbonFootprint": "High",
+      "strengths": ["Durable", "Long software support"],
+      "weaknesses": ["Non-replaceable battery", "High mining impact"],
+      "betterAlternatives": ["Fairphone 5", "Google Pixel 8a"]
+    },
+    {
+      "name": "Fairphone 5",
+      "category": "Smartphone",
+      "ecoScore": 92,
+      "carbonFootprint": "Low",
+      "strengths": ["Modular design", "Ethical sourcing", "Repairable"],
+      "weaknesses": ["Slightly expensive"],
+      "betterAlternatives": []
+    }
+  ]
+}

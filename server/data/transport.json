@@ -1,0 +1,22 @@
+{
+  "options": [
+    {
+      "mode": "Metro",
+      "carbonPerKm": 0.03,
+      "description": "Best for daily commute in cities",
+      "ecoScore": 90
+    },
+    {
+      "mode": "Electric Bike",
+      "carbonPerKm": 0.01,
+      "description": "Great for short distances",
+      "ecoScore": 95
+    },
+    {
+      "mode": "Car (Petrol)",
+      "carbonPerKm": 0.25,
+      "description": "High impact",
+      "ecoScore": 35
+    }
+  ]
+}

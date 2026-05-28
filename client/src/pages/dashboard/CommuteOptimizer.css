@@ -1,0 +1,270 @@
+/* =========================
+   COMMUTE OPTIMIZER PAGE
+========================= */
+
+.commute-page {
+  min-height: 100vh;
+  display: flex;
+  background: linear-gradient(
+    135deg,
+    #07110d,
+    #0d1d17,
+    #102a22
+  );
+  overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+.commute-main {
+  flex: 1;
+  margin-left: 270px;
+  padding: 40px;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.commute-heading {
+  font-size: 52px;
+  color: white;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.commute-subheading {
+  color: #9be15d;
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+
+/* =========================
+   FORM CARD
+========================= */
+
+.commute-card {
+  max-width: 850px;
+  padding: 35px;
+  border-radius: 34px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+}
+
+.commute-grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 24px;
+}
+
+.input-group label {
+  display: block;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.commute-input {
+  width: 100%;
+  height: 60px;
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.08);
+  padding: 0 22px;
+  color: white;
+  font-size: 18px;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.commute-input:focus {
+  border-color: #b8ef57;
+  box-shadow: 0 0 15px rgba(184,239,87,0.2);
+}
+
+.commute-input::placeholder {
+  color: rgba(255,255,255,0.35);
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.optimize-btn {
+  width: 100%;
+  margin-top: 32px;
+  height: 64px;
+  border: none;
+  border-radius: 24px;
+  background: linear-gradient(
+    135deg,
+    #b8ef57,
+    #42f5a1
+  );
+  color: #111;
+  font-size: 19px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.optimize-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(184,239,87,0.25);
+}
+
+.optimize-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* =========================
+   RESULT SECTION
+========================= */
+
+.result-wrapper {
+  margin-top: 50px;
+}
+
+.result-title {
+  color: white;
+  font-size: 34px;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+.result-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+  gap: 28px;
+}
+
+/* =========================
+   OPTION CARD
+========================= */
+
+.option-card {
+  position: relative;
+  padding: 30px;
+  border-radius: 32px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(18px);
+  transition: 0.3s ease;
+  overflow: hidden;
+}
+
+.option-card:hover {
+  transform: translateY(-5px);
+}
+
+.best-card {
+  border: 2px solid #b8ef57;
+  box-shadow: 0 0 30px rgba(184,239,87,0.2);
+}
+
+.best-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #b8ef57;
+  color: #111;
+  font-weight: 700;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+}
+
+.option-mode {
+  color: white;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.option-details {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.option-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.option-label {
+  color: rgba(255,255,255,0.55);
+}
+
+.option-value {
+  color: white;
+  font-weight: 600;
+}
+
+.green-value {
+  color: #b8ef57;
+}
+
+.option-recommendation {
+  margin-top: 24px;
+  color: rgba(255,255,255,0.82);
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+/* =========================
+   SUMMARY
+========================= */
+
+.result-summary {
+  margin-top: 40px;
+  text-align: center;
+  color: #b8ef57;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 992px) {
+  .commute-main {
+    margin-left: 90px;
+    padding: 24px;
+  }
+
+  .commute-heading {
+    font-size: 38px;
+  }
+}
+
+@media (max-width: 768px) {
+  .commute-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .result-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .commute-main {
+    margin-left: 0;
+    padding: 20px;
+  }
+
+  .commute-heading {
+    font-size: 30px;
+  }
+
+  .commute-subheading {
+    font-size: 16px;
+  }
+}

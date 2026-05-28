@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+
+  background: linear-gradient(
+    135deg,
+    #04110c 0%,
+    #071a12 35%,
+    #0b2a20 70%,
+    #0f3a2d 100%
+  );
+
+  color: white;
+
+  overflow-x: hidden;
+}
+
+body {
+  position: relative;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #08140f;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    #10b981,
+    #14b8a6
+  );
+
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #34d399;
+}
+
+/* Global Links */
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Global Buttons */
+
+button {
+  font-family: inherit;
+}
+
+/* Glass Effect */
+
+.glass {
+  background: rgba(255,255,255,0.05);
+
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  box-shadow:
+    0 8px 32px rgba(0,0,0,0.25);
+}
+
+/* Floating Background Effects */
+
+body::before {
+  content: "";
+
+  position: fixed;
+  top: -200px;
+  left: -200px;
+
+  width: 500px;
+  height: 500px;
+
+  background: rgba(16,185,129,0.15);
+
+  border-radius: 50%;
+
+  filter: blur(140px);
+
+  z-index: -1;
+}
+
+body::after {
+  content: "";
+
+  position: fixed;
+  right: -200px;
+  bottom: -200px;
+
+  width: 500px;
+  height: 500px;
+
+  background: rgba(20,184,166,0.12);
+
+  border-radius: 50%;
+
+  filter: blur(140px);
+
+  z-index: -1;
+}

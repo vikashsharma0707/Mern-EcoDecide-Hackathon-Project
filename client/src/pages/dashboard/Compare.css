@@ -1,0 +1,421 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* PAGE */
+
+.compare-page {
+  min-height: 100vh;
+  background: linear-gradient(
+    135deg,
+    #111111,
+    #1b1f1d,
+    #101010
+  );
+
+  display: flex;
+  overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+/* MAIN */
+
+.compare-main {
+  flex: 1;
+  margin-left: 250px;
+  padding: 30px;
+}
+
+/* HEADER */
+
+.compare-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.compare-title {
+  color: white;
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.compare-subtitle {
+  color: rgba(255,255,255,0.6);
+  margin-top: 8px;
+  font-size: 17px;
+}
+
+.compare-icons {
+  display: flex;
+  gap: 14px;
+}
+
+.compare-icon-btn {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.05);
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.compare-icon-btn:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+/* INPUT SECTION */
+
+.compare-input-section {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(18px);
+  border-radius: 35px;
+  padding: 30px;
+  margin-bottom: 40px;
+}
+
+.compare-input-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* INPUT CARD */
+
+.product-input-card {
+  background: rgba(255,255,255,0.05);
+  border-radius: 28px;
+  padding: 22px;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.product-input-label {
+  color: #c5ff67;
+  margin-bottom: 14px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.product-input {
+  width: 100%;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  height: 60px;
+  border-radius: 20px;
+  padding: 0 20px;
+  color: white;
+  font-size: 16px;
+  outline: none;
+}
+
+.product-input::placeholder {
+  color: rgba(255,255,255,0.4);
+}
+
+/* BUTTON */
+
+.compare-btn {
+  width: 100%;
+  margin-top: 30px;
+  height: 65px;
+  border: none;
+  border-radius: 24px;
+  background: linear-gradient(
+    to right,
+    #d8ff69,
+    #8ff36c
+  );
+
+  color: #111;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.compare-btn:hover {
+  transform: scale(1.01);
+}
+
+/* RESULT */
+
+.result-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* CARD */
+
+.result-card {
+  position: relative;
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,0.08),
+    rgba(255,255,255,0.03)
+  );
+
+  border-radius: 35px;
+  padding: 28px;
+  border: 1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(18px);
+  overflow: hidden;
+  transition: 0.4s;
+}
+
+.result-card:hover {
+  transform: translateY(-8px);
+}
+
+.winner-card {
+  border: 2px solid #c9ff63;
+  box-shadow: 0 0 35px rgba(201,255,99,0.3);
+}
+
+/* BADGE */
+
+.winner-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #d8ff69;
+  color: #111;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 10px 18px;
+  border-radius: 50px;
+}
+
+/* IMAGE */
+
+.product-image-box {
+  width: 100%;
+  height: 180px;
+  border-radius: 28px;
+  background: rgba(255,255,255,0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 70px;
+  margin-bottom: 24px;
+}
+
+/* NAME */
+
+.product-name {
+  color: white;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+/* SCORE RING */
+
+.score-ring {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  margin: 0 auto 30px;
+
+  background: conic-gradient(
+    #c9ff63 0% 85%,
+    rgba(255,255,255,0.12) 85%
+  );
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.score-inner {
+  width: 130px;
+  height: 130px;
+  background: #161616;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.score-inner h1 {
+  color: white;
+  font-size: 48px;
+}
+
+.score-inner span {
+  color: rgba(255,255,255,0.6);
+}
+
+/* STATS */
+
+.stats-section {
+  margin-bottom: 30px;
+}
+
+.stat-row {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  margin-bottom: 12px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  width: 75%;
+  height: 100%;
+  background: #c9ff63;
+}
+
+.eco-number {
+  color: white;
+  font-size: 48px;
+  margin-top: 18px;
+}
+
+/* RADAR */
+
+.radar-box {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.08);
+  margin: 20px auto;
+  position: relative;
+}
+
+.radar-circle {
+  width: 90px;
+  height: 90px;
+  background: rgba(201,255,99,0.15);
+  border: 3px solid #c9ff63;
+  position: absolute;
+  top: 45px;
+  left: 45px;
+  transform: rotate(12deg);
+}
+
+/* TEXT */
+
+.strength-section,
+.weakness-section {
+  margin-top: 20px;
+}
+
+.strength-section h4,
+.weakness-section h4 {
+  color: #c9ff63;
+  margin-bottom: 12px;
+}
+
+.weakness-section h4 {
+  color: #ff6f6f;
+}
+
+.strength-section ul,
+.weakness-section ul {
+  padding-left: 20px;
+}
+
+.strength-section li,
+.weakness-section li {
+  color: rgba(255,255,255,0.8);
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+/* BUTTON */
+
+.winner-btn {
+  width: 100%;
+  height: 58px;
+  border: none;
+  border-radius: 20px;
+  margin-top: 25px;
+  background: linear-gradient(
+    to right,
+    #d8ff69,
+    #9ff56d
+  );
+
+  color: #111;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1200px) {
+  .result-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .compare-input-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 900px) {
+  .compare-main {
+    margin-left: 90px;
+    padding: 20px;
+  }
+
+  .result-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .compare-title {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 600px) {
+  .compare-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .compare-main {
+    margin-left: 0;
+    padding: 15px;
+  }
+
+  .compare-title {
+    font-size: 30px;
+  }
+
+  .product-name {
+    font-size: 24px;
+  }
+
+  .score-ring {
+    width: 150px;
+    height: 150px;
+  }
+
+  .score-inner {
+    width: 110px;
+    height: 110px;
+  }
+
+  .score-inner h1 {
+    font-size: 36px;
+  }
+}

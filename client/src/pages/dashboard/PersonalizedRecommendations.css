@@ -1,0 +1,187 @@
+/* ==========================
+   PAGE LAYOUT
+========================== */
+
+.recommendations-page {
+  min-height: 100vh;
+  display: flex;
+  background: linear-gradient(
+    135deg,
+    #07110d,
+    #0d1d17,
+    #102a22
+  );
+  font-family: "Poppins", sans-serif;
+}
+
+.recommendations-main {
+  flex: 1;
+  margin-left: 270px;
+  padding: 40px;
+}
+
+/* ==========================
+   HEADER
+========================== */
+
+.recommendations-header {
+  margin-bottom: 40px;
+}
+
+.recommendations-title {
+  color: white;
+  font-size: 52px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.recommendations-subtitle {
+  color: #b8ef57;
+  font-size: 20px;
+}
+
+/* ==========================
+   LOADING
+========================== */
+
+.loading-box {
+  text-align: center;
+  padding: 100px 0;
+  color: rgba(255,255,255,0.6);
+  font-size: 20px;
+}
+
+/* ==========================
+   GRID
+========================== */
+
+.tips-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(350px,1fr));
+  gap: 24px;
+}
+
+/* ==========================
+   TIP CARD
+========================== */
+
+.tip-card {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 30px;
+  padding: 28px;
+  backdrop-filter: blur(20px);
+  transition: 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.tip-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+}
+
+.tip-card::before {
+  content: "";
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  background: rgba(184,239,87,0.08);
+  border-radius: 50%;
+  right: -80px;
+  top: -80px;
+}
+
+.tip-category {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 30px;
+  background: rgba(184,239,87,0.15);
+  color: #b8ef57;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.tip-title {
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.tip-description {
+  color: rgba(255,255,255,0.7);
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.tip-impact {
+  padding: 14px;
+  border-radius: 16px;
+  background: rgba(66,245,161,0.1);
+  border: 1px solid rgba(66,245,161,0.15);
+  color: #42f5a1;
+  font-weight: 600;
+}
+
+/* ==========================
+   REFRESH BUTTON
+========================== */
+
+.refresh-btn {
+  margin-top: 40px;
+  border: none;
+  padding: 16px 32px;
+  border-radius: 22px;
+  background: linear-gradient(
+    135deg,
+    #b8ef57,
+    #42f5a1
+  );
+  color: #111;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.refresh-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(184,239,87,0.25);
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:992px){
+
+  .recommendations-main{
+    margin-left:90px;
+    padding:25px;
+  }
+
+  .recommendations-title{
+    font-size:38px;
+  }
+}
+
+@media(max-width:768px){
+
+  .recommendations-main{
+    margin-left:0;
+  }
+
+  .tips-grid{
+    grid-template-columns:1fr;
+  }
+
+  .recommendations-title{
+    font-size:30px;
+  }
+
+  .recommendations-subtitle{
+    font-size:16px;
+  }
+}

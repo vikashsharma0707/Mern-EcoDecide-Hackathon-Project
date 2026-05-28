@@ -1,0 +1,18 @@
+{
+  "recipes": [
+    {
+      "name": "Seasonal Vegetable Stir Fry",
+      "ecoScore": 88,
+      "ingredients": ["Local vegetables", "Tofu", "Brown rice"],
+      "carbonImpact": "Very Low",
+      "tips": "Use seasonal vegetables to reduce transport emissions"
+    },
+    {
+      "name": "Zero Waste Dal Khichdi",
+      "ecoScore": 85,
+      "ingredients": ["Rice", "Lentils", "Local spices"],
+      "carbonImpact": "Low",
+      "tips": "Use pressure cooker to save energy"
+    }
+  ]
+}

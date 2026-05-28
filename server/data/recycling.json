@@ -1,0 +1,14 @@
+{
+  "items": [
+    {
+      "item": "Old Smartphone",
+      "method": "Sell to refurbisher or drop at authorized e-waste center",
+      "points": 25
+    },
+    {
+      "item": "Plastic Bottles",
+      "method": "Rinse and put in recycling bin or give to local recycler",
+      "points": 5
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+/* ==========================
+   TOGGLE ROW
+========================== */
+
+.toggle-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 18px 0;
+
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.toggle-row:last-child {
+  border-bottom: none;
+}
+
+.toggle-label {
+  color: white;
+
+  font-size: 1rem;
+  font-weight: 500;
+
+  letter-spacing: 0.3px;
+}
+
+/* ==========================
+   SWITCH
+========================== */
+
+.toggle-switch {
+  position: relative;
+
+  width: 64px;
+  height: 34px;
+
+  display: inline-block;
+
+  cursor: pointer;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Track */
+
+.toggle-slider {
+  position: absolute;
+
+  inset: 0;
+
+  border-radius: 999px;
+
+  background: rgba(255,255,255,0.15);
+
+  border: 1px solid rgba(255,255,255,0.1);
+
+  transition: 0.3s ease;
+}
+
+/* Circle */
+
+.toggle-slider::before {
+  content: "";
+
+  position: absolute;
+
+  width: 26px;
+  height: 26px;
+
+  left: 4px;
+  top: 3px;
+
+  border-radius: 50%;
+
+  background: white;
+
+  transition: 0.3s ease;
+
+  box-shadow:
+    0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Active */
+
+.toggle-switch input:checked + .toggle-slider {
+  background: linear-gradient(
+    135deg,
+    #10b981,
+    #14b8a6
+  );
+
+  box-shadow:
+    0 0 20px rgba(16,185,129,0.4);
+}
+
+.toggle-switch input:checked + .toggle-slider::before {
+  transform: translateX(29px);
+}
+
+/* Focus */
+
+.toggle-switch input:focus + .toggle-slider {
+  box-shadow:
+    0 0 0 4px rgba(16,185,129,0.15);
+}
+
+/* Hover */
+
+.toggle-row:hover .toggle-label {
+  color: #d1fae5;
+}
+
+.toggle-row:hover .toggle-slider {
+  border-color: rgba(16,185,129,0.3);
+}

@@ -1,0 +1,429 @@
+/* =========================
+   HOME PAGE
+========================= */
+
+.home-page {
+  min-height: 100vh;
+
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(16, 185, 129, 0.15),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(20, 184, 166, 0.12),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #04110c 0%,
+      #071a12 35%,
+      #0b2a20 70%,
+      #0f3a2d 100%
+    );
+
+  position: relative;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+  padding: 30px 60px;
+}
+
+/* =========================
+   BACKGROUND BLUR
+========================= */
+
+.home-blur {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(140px);
+  z-index: 1;
+}
+
+.blur-left {
+  width: 450px;
+  height: 450px;
+  background: rgba(34, 197, 94, 0.22);
+  top: 80px;
+  left: -120px;
+}
+
+.blur-right {
+  width: 400px;
+  height: 400px;
+  background: rgba(16, 185, 129, 0.18);
+  bottom: 50px;
+  right: -100px;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: relative;
+  z-index: 10;
+
+  margin-bottom: 80px;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo-icon {
+  width: 60px;
+  height: 60px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(15px);
+
+  border: 1px solid rgba(255,255,255,0.1);
+
+  border-radius: 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 30px;
+
+  box-shadow:
+    0 10px 25px rgba(0,0,0,0.15);
+}
+
+.logo-text {
+  color: white;
+  font-size: 38px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+/* =========================
+   NAV BUTTONS
+========================= */
+
+.nav-buttons {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.login-btn {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.login-btn:hover {
+  color: #34d399;
+}
+
+.register-btn {
+  padding: 14px 30px;
+
+  border-radius: 18px;
+
+  text-decoration: none;
+
+  color: #111;
+  font-weight: 700;
+
+  background: linear-gradient(
+    135deg,
+    #b8ef57,
+    #34d399
+  );
+
+  box-shadow:
+    0 10px 25px rgba(16,185,129,0.35);
+
+  transition: all 0.3s ease;
+}
+
+.register-btn:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 18px 35px rgba(16,185,129,0.45);
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero-section {
+  position: relative;
+  z-index: 2;
+
+  text-align: center;
+
+  max-width: 1400px;
+  margin: auto;
+}
+
+.hero-title {
+  color: white;
+
+  font-size: 82px;
+  font-weight: 800;
+
+  line-height: 1.1;
+
+  margin-bottom: 30px;
+}
+
+.hero-title span {
+  background: linear-gradient(
+    135deg,
+    #34d399,
+    #b8ef57
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-text {
+  max-width: 850px;
+
+  margin: auto;
+
+  color: rgba(255,255,255,0.72);
+
+  font-size: 24px;
+
+  line-height: 1.7;
+
+  margin-bottom: 50px;
+}
+
+/* =========================
+   HERO BUTTONS
+========================= */
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+
+  margin-bottom: 100px;
+}
+
+.hero-start-btn {
+  padding: 18px 42px;
+
+  border-radius: 20px;
+
+  text-decoration: none;
+
+  color: #111;
+
+  font-size: 18px;
+  font-weight: 700;
+
+  background: linear-gradient(
+    135deg,
+    #b8ef57,
+    #34d399
+  );
+
+  box-shadow:
+    0 10px 25px rgba(16,185,129,0.35);
+
+  transition: all 0.3s ease;
+}
+
+.hero-login-btn {
+  padding: 18px 42px;
+
+  border-radius: 20px;
+
+  text-decoration: none;
+
+  color: white;
+
+  font-size: 18px;
+  font-weight: 700;
+
+  border: 1px solid rgba(255,255,255,0.2);
+
+  background: rgba(255,255,255,0.05);
+
+  backdrop-filter: blur(10px);
+
+  transition: all 0.3s ease;
+}
+
+.hero-start-btn:hover,
+.hero-login-btn:hover {
+  transform: translateY(-3px);
+}
+
+.hero-start-btn:hover {
+  box-shadow:
+    0 18px 35px rgba(16,185,129,0.45);
+}
+
+.hero-login-btn:hover {
+  background: rgba(255,255,255,0.08);
+}
+
+/* =========================
+   FEATURES GRID
+========================= */
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+
+  position: relative;
+  z-index: 2;
+}
+
+.feature-card {
+  background: rgba(255,255,255,0.06);
+
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  border-radius: 35px;
+
+  padding: 40px;
+
+  text-align: left;
+
+  height: 100%;
+
+  transition: all 0.35s ease;
+
+  box-shadow:
+    0 8px 32px rgba(0,0,0,0.15);
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+
+  border-color: rgba(16,185,129,0.3);
+
+  box-shadow:
+    0 25px 40px rgba(0,0,0,0.3),
+    0 0 30px rgba(16,185,129,0.15);
+}
+
+.feature-icon {
+  font-size: 55px;
+  margin-bottom: 20px;
+}
+
+.feature-title {
+  color: white;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.feature-desc {
+  color: rgba(255,255,255,0.7);
+
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1200px) {
+  .hero-title {
+    font-size: 70px;
+  }
+
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 1000px) {
+  .hero-title {
+    font-size: 58px;
+  }
+
+  .hero-text {
+    font-size: 20px;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-page {
+    padding: 20px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .hero-title {
+    font-size: 42px;
+  }
+
+  .hero-text {
+    font-size: 18px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-start-btn,
+  .hero-login-btn {
+    width: 100%;
+    max-width: 320px;
+    text-align: center;
+  }
+
+  .feature-card {
+    padding: 30px;
+  }
+
+  .feature-title {
+    font-size: 24px;
+  }
+
+  .feature-desc {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-text {
+    font-size: 28px;
+  }
+
+  .hero-title {
+    font-size: 34px;
+  }
+
+  .hero-text {
+    font-size: 16px;
+  }
+}
